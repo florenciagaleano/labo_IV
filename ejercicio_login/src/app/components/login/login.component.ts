@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BienvenidoComponent } from '../bienvenido/bienvenido.component';
 import { ErrorComponent } from '../error/error.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +15,17 @@ import { ErrorComponent } from '../error/error.component';
 })
 export class LoginComponent {
   usuario: Usuario = new Usuario("", "");;
-  loginExitoso: boolean = false;
+  constructor(private router: Router) {}
+
+  goTo(path: string) {
+    this.router.navigate([path]);
+  }
 
   login(){
     if(this.usuario.nombre == 'fgaleano' && this.usuario.clave == '1234'){
-      console.log("login ok");
-      this.loginExitoso = true;
+      this.router.navigate(['/bienvenido']);
     }else{
-      console.log("fallo login");
-      this.loginExitoso = false;
+      this.router.navigate(['/error']);
     }
   }
 
