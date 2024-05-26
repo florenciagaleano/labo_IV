@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "simulacro_parcial": {
+    "simulacroparcial": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/simulacro_parcial",
+            "outputPath": "dist/simulacroparcial",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "simulacro_parcial:build:production"
+              "buildTarget": "simulacroparcial:build:production"
             },
             "development": {
-              "buildTarget": "simulacro_parcial:build:development"
+              "buildTarget": "simulacroparcial:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "simulacro_parcial:build"
+            "buildTarget": "simulacroparcial:build"
           }
         },
         "test": {

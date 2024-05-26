@@ -15,7 +15,6 @@ export class BusquedaComponent {
 
   actualizarDetalle(pelicula: Pelicula) {
     this.peliculaSeleccionada = pelicula;
-    console.log(this.peliculaSeleccionada);
   }
 
 }

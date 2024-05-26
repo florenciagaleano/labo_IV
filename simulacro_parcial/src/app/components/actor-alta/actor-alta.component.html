@@ -1,0 +1,11 @@
+<form class="form" (ngSubmit)="altaActor()">
+    <div class="form-group">
+        <input type="text" name="nombre" title="nombre" placeholder="Nombre" [(ngModel)]="actor.nombreCompleto" />
+      </div>
+      <div class="form-group">
+        <app-tabla-paises (paisSeleccionado)="onPaisSeleccionado($event)"></app-tabla-paises>
+      </div>
+    
+      <button type="submit">Dar de alta</button>
+    
+</form>
