@@ -1,0 +1,4 @@
+<div class="busqueda-container">
+  <app-tabla-pelicula (peliculaSeleccionada)="actualizarDetalle($event)"></app-tabla-pelicula>
+  <app-detalle-pelicula [pelicula]="peliculaSeleccionada"></app-detalle-pelicula>
+</div>

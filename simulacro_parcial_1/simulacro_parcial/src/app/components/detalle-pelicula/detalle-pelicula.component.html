@@ -1,0 +1,7 @@
+<div *ngIf="pelicula">
+  <h3>{{ pelicula?.nombre }}</h3>
+  <p>{{ pelicula?.tipo }}</p>
+  <p>{{ pelicula?.fechaEstreno }}</p>
+  <p>{{ pelicula?.cantidadPublico }}</p>
+  <img [src]="'assets/' + pelicula?.imagen" alt="{{ pelicula?.nombre }}" />
+</div>

@@ -1,0 +1,31 @@
+<label for="vista">Vista</label>
+<select name="vista" [(ngModel)]="vista" (ngModelChange)="cambiarVista($event)">
+  <option value="grilla">Grilla</option>
+  <option value="vista">Vista</option>
+</select>
+
+<div *ngIf="vista === 'grilla'" class="peliculas-grid">
+  <div *ngFor="let pelicula of peliculas" class="pelicula-item">
+    <input type="radio" name="selectedPelicula" [value]="pelicula.id" [(ngModel)]="selectedPeliculaId" (change)="seleccionarPelicula(pelicula)">
+    <img [src]="'assets/' + pelicula.imagen" alt="{{ pelicula.nombre }}" class="pelicula-imagen">
+    <div class="pelicula-info">
+      <h3>{{ pelicula.nombre }}</h3>
+      <p>{{ pelicula.tipo }}</p>
+      <p>{{ pelicula.fechaEstreno | date: 'dd/MM/yyyy' }}</p>
+      <p>{{ pelicula.cantidadPublico }}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="vista === 'vista'" class="peliculas-list">
+  <div *ngFor="let pelicula of peliculas" class="pelicula-item">
+    <input type="radio" name="selectedPelicula" [value]="pelicula.id" [(ngModel)]="selectedPeliculaId" (change)="seleccionarPelicula(pelicula)">
+    <img [src]="'assets/' + pelicula.imagen" alt="{{ pelicula.nombre }}" class="pelicula-imagen">
+    <div class="pelicula-info">
+      <h3>{{ pelicula.nombre }}</h3>
+      <p>{{ pelicula.tipo }}</p>
+      <p>{{ pelicula.fechaEstreno | date: 'dd/MM/yyyy' }}</p>
+      <p>{{ pelicula.cantidadPublico }}</p>
+    </div>
+  </div>
+</div>

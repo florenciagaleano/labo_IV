@@ -1,0 +1,47 @@
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.peliculas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pelicula-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.pelicula-item-list {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.pelicula-imagen {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.pelicula-imagen-list {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.pelicula-info {
+  text-align: center;
+}
+
+.pelicula-info-list {
+  display: flex;
+  flex-direction: column;
+}
